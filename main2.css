@@ -1,0 +1,580 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --box-shadow: 0px 0px 0px 6px rgb(255 255 255/40%);
+    --orange: #6F7418;
+}
+a{
+    text-decoration: none;
+    font-family: 'Sensa Serif Regular', Times, serif;
+}
+ul{
+    list-style: none;
+}
+.btn{
+    padding: .8rem 2.5em;
+    background: #6F7418;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    border: 2px solid #343701;
+}
+.btn:hover{
+    background: #A69B03;
+}
+.title{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 5.5rem;
+}
+.title h1{
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.title span{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    line-height: 2;
+    color: var(--orange);
+}
+.line,
+.line4{
+    width: 100%;
+    height: 100px;
+    margin-top: -3.6rem;
+}
+.line{
+    margin-bottom: 10rem;
+}
+.line2,
+.line3{
+    width: 100%;
+    height: 100px;
+    margin-top: -3.6rem;
+}
+.line3{
+    margin-top: -3.5rem;
+    margin-bottom: 7rem;
+}
+.message,
+.empty{
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 2;
+    width: 59%;
+    padding: .5rem 1.5rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    background: #000;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+}
+.message {
+    position: fixed;
+    width: 30%;
+    top: 5%;
+    left: 75%;
+    transform: translateX(-50%);
+    background-color: #FCEACB;
+    color: #721c24;
+    padding: 10px 20px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Times New Roman', Times, serif;
+}
+.message i{
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+}
+.empty{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+input,
+button,
+textarea,
+select{
+    font-family: 'Times New Roman', Times, serif;
+    outline: none;
+    border: 2px solid #343701;
+    background: transparent;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+button{
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+}
+input[type=submit]{
+    cursor: pointer;
+}
+input[type="submit"][name="update_order"]{
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px; 
+    height: 7.7%;
+}
+/*-------banner-------*/
+.banner{
+    background: #FEBA19;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+
+}
+.banner::before{
+    position: absolute;
+    content: '';
+    bottom: -204px;
+    right: -190px;
+    background-image: url('image/2.png');
+    width: 832px;
+    height: 690px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+.banner .detail{
+    position: absolute;
+    top: 63%;
+    left: 32.5%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 200;
+    max-width: 1000px; /* Фіксована ширина контейнера */
+    padding: 0 20px;
+}
+.banner .detail h1{
+    font-size: 4.5rem;
+    color: #FCEACB;
+    left: -50%;
+}
+.banner .detail p{
+    font-size: 25px;
+    line-height: 2;
+    color: #FCEACB;
+    left: 20%;
+}
+.banner .detail a{
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+.banner .detail span{
+    color: #fff;
+}
+body {
+   overflow-x: hidden; /* Заборона горизонтального прокручування */
+   background-color: #FEBA19;
+
+}
+/*-------header-------*/
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 101;
+    transition: .3s;
+    background: #FCEACB;
+    box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+}
+header.scrolled{
+    background: #FCEACB;
+    box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+}
+header.scrolled a:hover{
+    color: #FEBA19;
+}
+.flex{
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 1rem;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.navbar a{
+    margin: 0 1rem;
+    font-size: 1rem;
+    color: #000;
+    text-transform: uppercase;
+    position: relative;
+    
+}
+.navbar a:hover {
+    color: #FEBA19;
+}
+header .icons {
+    display: flex;
+    align-items: center;
+}
+header .icons i {
+    font-size: 1.5rem;
+    color: #000;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+.logout-btn {
+    padding: .8rem 2.5em;
+    background-color: #6F7418; /* Задаємо колір фону */
+    color: #fff; /* Задаємо колір тексту */
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    border: 2px solid #343701;
+}
+
+.logout-btn:hover {
+    background-color: #A69B03; /* Задаємо колір фону при наведенні */
+}
+
+/*-------footer-------*/
+footer{
+    background: #A69B03;
+    width: 100%;
+    margin-top: 0rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+}
+footer::before,
+.features::before{
+    position: absolute;
+    content: '';
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    opacity: .2;
+    width: 100%;
+    height: 100%;
+}
+footer .inner-footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    z-index: 101;
+}
+footer .inner-footer .card {
+    transform: translateX(100px); 
+    font-style: normal;
+}
+footer .inner-footer .card li{
+    cursor: pointer;
+    line-height: 1.5rem;
+    font-size: 16px;
+    font-style: normal;
+}
+footer .inner-footer .card li:nth-child(1),
+footer .inner-footer .card p{
+    margin-top: 1rem;
+}
+footer .inner-footer .card p{
+    margin-bottom: 1rem;
+    font-size: 16px;
+}
+footer .inner-footer .card input{
+    width: 80%;
+    box-shadow: none;
+    border: 1px solid #fff;
+    border-radius: unset;
+    margin: 0;
+}
+footer .inner-footer .card .input-field i{
+    color: #fff;
+    background: rgb(255, 255, 255/40%);
+    padding: 1rem;
+    margin-left: .3rem;
+    cursor: pointer;
+}
+body{
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+    padding-bottom: 200px;
+    box-sizing: border-box;
+    background-color: #FEBA19;
+
+}
+/*-------about us-------*/
+
+.about-us{
+    background: #fff;
+    position: relative;
+    margin-top: -3.5rem;
+}
+.about-us::before{
+    width: 316px;
+    height: 245px;
+    background-size: 316px;
+    top: -15%;
+    background-repeat: no-repeat;
+}
+.about-us .row,
+.project .row{
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1rem));
+    padding: 6% 4%;
+}
+.about-us .row p{
+    line-height: 2;
+    color: #555;
+    font-size: 18px;
+}
+.about-us .img-box img,
+.project img{
+    width: 100%;
+    border-radius: 10px;
+}
+/*-------about us features-------*/
+.features{
+    padding: 3rem 0;
+    margin-top: -3.5rem;
+    min-height: 100vh;
+    position: relative;
+}
+.features .title span{
+    color: #FCEACB;
+    margin-top: -50px;
+
+}
+.features::after,
+.address::after{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    right: 0;
+    width: 225px;
+    height: 220px;
+    background-size: 225px;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+.features .row{
+    padding: 2% 4%;
+    padding-top: 4%;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+.features .row .box{
+    box-shadow: var(--box-shadow);
+    padding: 1rem 0;
+    margin: 1rem;
+    border-radius: 10px;
+    text-align: center;
+}
+.features .row .box h4{
+    font-size: 1.3rem;
+    margin-bottom: .5rem;
+}
+.features .row .box img{
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+body {
+    background-color: #FEBA19;
+}
+/* shop.php */
+
+body {
+    background-color: #FEBA19;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+/* Стилі для категорій */
+.dropdown {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.dropdown a {
+    flex-basis: calc(25% - 20px); /* По дві категорії на рядок з відступами (22px для margin 10px і border 2px) */
+    margin: 10px;
+    text-decoration: none;
+    color: #343701;
+    box-sizing: border-box; /* Враховувати padding і border у обчисленні розміру */
+    background-color: #FCEACB;
+    border: 2px solid #343701;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    width: calc(25% - 20px); /* Займає половину відступу */
+    position: relative;
+    aspect-ratio: 1; 
+    position: relative;
+    top: 250px;
+}
+
+.dropdown a:hover {
+    background-color: #FCEACB;
+    border: 2px solid #343701;
+}
+
+.category-image {
+    display: block;
+    width: 400%; /* Make the images four times larger */
+    height: auto; /* Maintain aspect ratio */
+
+    max-width: 1200px; /* або будь-яка інша фіксована ширина */
+    margin: 0 auto;
+
+.category-description {
+    color: #343701;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.category-name {
+    background-color: #6F7418;
+    color: #FCEACB;
+    text-align: center;
+    padding: 5px 10px;
+    margin-top: 5px;
+    display: inline-block;
+}
+/*-------category-------*/
+
+body {
+    background-color: #FEBA19;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.product {
+    background-color: #FCEACB;
+    border: 2px solid #343701;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: calc(25% - 40px); /* Чотири продукти в рядок */
+    box-sizing: border-box;
+}
+
+.product-name {
+    font-size: 20px;
+    color: #343701;
+    margin-bottom: 10px;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 18px;
+    color: #6F7418;
+    margin-bottom: 10px;
+}
+
+.product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-form .btn {
+    padding: .8rem 1.5em;
+    background: #6F7418;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    border: 2px solid #343701;
+}
+
+.product-form .btn:hover {
+    background: #A69B03;
+}
+
+
+
+
+/* Стилі для модального вікна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.modal-content {
+    max-width: 400px;
+    margin: auto;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
