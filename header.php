@@ -52,6 +52,7 @@ foreach ($_SESSION['cart'] as $item) {
             font-size: 14px;
             color: #343701;
         }
+    
     </style>
 </head>
 <body>
