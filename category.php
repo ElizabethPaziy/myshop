@@ -182,8 +182,8 @@ $result = mysqli_query($conn, $query) or die('Запит не виконано: 
         <div class="filter-title">Фільтрація за ціною</div>
         <form method="get" action="category.php" class="filter-form">
             <input type="hidden" name="category_id" value="<?php echo $category_id; ?>">
-            <input type="number" name="min_price" placeholder="Вкажіть мінімальну ціну" step="0.01" value="<?php echo htmlspecialchars($min_price); ?>">
-            <input type="number" name="max_price" placeholder="Вкажіть максимальну ціну" step="0.01" value="<?php echo htmlspecialchars($max_price); ?>">
+            <input type="number" name="min_price" placeholder="Вкажіть мінімальну ціну:" step="0.01" value="<?php echo htmlspecialchars($min_price); ?>">
+            <input type="number" name="max_price" placeholder="Вкажіть максимальну ціну:" step="0.01" value="<?php echo htmlspecialchars($max_price); ?>">
             <button type="submit" class="btn">Фільтрувати</button>
         </form>
 
