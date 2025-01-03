@@ -156,7 +156,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <!-- Форма вибору способу оплати -->
             <div class="form-section">
                 <h2>Спосіб оплати</h2>
-                <label for="payment">Оберіть спосіб оплати:</label>
+                <label for="payment">Оберіть спосіб оплати</label>
                 <select id="payment" name="payment" required>
                     <option value="online">Онлайн-оплата</option>
                     <option value="cash">Оплата при отриманні</option>
