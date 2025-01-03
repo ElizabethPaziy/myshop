@@ -21,13 +21,13 @@
 	 			$_SESSION['user_id'] = $row['id'];
 	 				header('location:index.php');
 	 			} else {
-	 				$message[] = 'Неправильний email або пароль';
+	 				$message[] = 'Неправильний email або пароль!';
 	 			}
 			} else {
-				$message[] = 'Неправильний email або пароль';
+				$message[] = 'Неправильний email або пароль!';
 			}
 		} else {
-			$message[] = 'Неправильний email або пароль';
+			$message[] = 'Неправильний email або пароль!';
 	}
 ?>
 <!DOCTYPE html>

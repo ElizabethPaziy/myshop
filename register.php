@@ -23,7 +23,7 @@
 				$message[] = 'Паролі не співпадають';
 			}else{
 				mysqli_query($conn, "INSERT INTO `users`(`name`, `email`, `password`) VALUES ('$name', '$email', '$password')") or die('Запит не виконано');
-				$message[] = 'Реєстрація пройшла успішно';
+				$message[] = 'Реєстрація пройшла успішно!';
 				header('refresh:5;url=login.php');
 			}
 		}
