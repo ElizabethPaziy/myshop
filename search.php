@@ -23,6 +23,7 @@ if (isset($_GET['products_name'])) {
     }
 }
 
+
 ?>
 <!DOCTYPE html>
 <html lang="uk">
